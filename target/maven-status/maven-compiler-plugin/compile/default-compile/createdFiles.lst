@@ -1,0 +1,3 @@
+com\processproject\workflow\Application.class
+com\processproject\workflow\CheckWebsiteRecipeDummyDelegate.class
+com\processproject\workflow\IsRecipeHealthyRequestDelegate.class
