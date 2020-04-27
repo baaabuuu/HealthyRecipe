@@ -13,10 +13,12 @@ public class IsRecipeHealthyRequestDelegate implements JavaDelegate {
 	{
 		String recipe	   = (String) execution.getVariable("recipe");		
 		
+		String businessKey = (String) execution.getBusinessKey();
 		execution.getProcessEngineServices()
 		.getRuntimeService()
 		.createMessageCorrelation("IsRecipeHealthy")
 		.setVariable( "recipe", recipe)
+		.setVariable("key", businessKey)
 		.correlate();		
 	}
 	
